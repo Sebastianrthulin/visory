@@ -177,8 +177,8 @@
     height: auto;
     display: flex;
     margin: 0px;
-    padding-top: 25px;
-    padding-left: 25px;
+    padding-top: 10px;
+    padding-left: 10px;
   }
 
   #mobile-menu {
