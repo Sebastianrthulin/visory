@@ -29,13 +29,10 @@
   padding: 0;
 }
 
-.main__logo {
-  /* width: auto; */
-  /* height: auto; */
-  display: flex;
-  margin: 0px;
-  padding-top: 25px;
-  padding-left: 50px;
+.main__logo img {
+    height: 80px; 
+    cursor: pointer;
+    padding-left: 25px;
 }
 
 .navbar__menu {
@@ -86,13 +83,9 @@
     padding: 0;
   }
 
-  .main__logo {
-    width: 9%;
-    height: auto;
-    display: flex;
-    margin: 0px;
-    padding-top: 25px;
-    padding-left: 50px;
+  .main__logo img {
+    height: 70px;
+    padding-top: 10px; 
   }
 
   .navbar__menu {
@@ -103,7 +96,7 @@
     position: absolute;
     margin: 0;
     opacity: 0;
-    height: 30vh;
+    height: 35vh;
     z-index: 20;
     width: 100%;
     top: -1000;
@@ -134,6 +127,7 @@
 
   .navbar__item {
     width: 100%;
+    padding-top: 30px;
   }
 
   .navbar__links {
@@ -173,12 +167,9 @@
 }
 
 @media screen and (max-width: 480px) {
-  .main__logo {
-    height: auto;
-    display: flex;
-    margin: 0px;
-    padding-top: 25px;
-    padding-left: 25px;
+  .main__logo img {
+    height: 70px; 
+    padding-top: 20px;
   }
 
   #mobile-menu {
@@ -588,6 +579,30 @@
       font-size: 0.85rem; 
       line-height: 1.2;
     }
+    .skills-skill {
+      backdrop-filter: blur(12px);
+      text-align: center;
+      background-image: linear-gradient(151deg, #171229 0%, rgba(96, 17, 156, 0.6) 100%);
+      border: 3px solid #7F69FA;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 1.2rem;
+      font-weight: 400;
+      color: white;
+      flex: 1;  
+      width: 100%;
+      animation: appear linear;
+      animation-timeline: view();
+      animation-range-end: 40%;
+    }
+    .character {
+      width: 100%;
+      margin: 0 auto; 
+      padding-top: 5rem;
+    }
   }
 
 
@@ -789,6 +804,9 @@
   justify-content: center;
   text-align: center;
   align-items: center;
+  animation: appear linear;
+    animation-timeline: view();
+    animation-range-end: 40%;
 }
 
 .profits__main-heading {
@@ -819,6 +837,9 @@
   display: flex;
   justify-content: center; 
   gap: 30px; 
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range-end: 40%;
 }
 
 .cprofits-feat {
@@ -829,6 +850,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range-end: 40%;
 }
 
 .cprofits1 {
@@ -836,6 +860,9 @@
   grid-template-columns: repeat(3, 1fr); 
   gap: 50px; 
   padding-top: 50px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range-end: 40%;
 }
 
 .cprofits-feat1 {
@@ -852,6 +879,9 @@
   box-shadow: none; 
   margin: 0; 
   padding: 0; 
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range-end: 40%;
 }
 
 .profit-icons {
@@ -860,6 +890,9 @@
   max-width: 80%;
   height: auto;
   transition: all 0.45s ease;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range-end: 40%;
 }
 
 .profit-icons:hover {
@@ -891,6 +924,7 @@
   }
 
   .cprofits1 {
+    display: grid;
     grid-template-columns: repeat(2, 1fr); 
     gap: 25px; 
   }
@@ -899,7 +933,6 @@
     height: 210px;
     text-align: center;
     border-radius: 10px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -927,25 +960,27 @@
     padding-bottom: 2rem;
   }
 
+  .cprofits, 
   .cprofits1 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 25px; 
-    padding: 0 1rem; 
+    grid-template-columns: 1fr; /* Lägger varje element på en ny rad */
+    gap: 1.5rem; /* Avstånd mellan elementen */
   }
 
+  .cprofits-feat, 
   .cprofits-feat1 {
-    height: 130px; 
-    font-size: 0.75rem; 
+    height: auto; 
+    font-size: 0.85rem; 
     display: flex;
     flex-direction: column;
     align-items: center; 
     justify-content: center; 
     text-align: center; 
     border-radius: 6px; 
-    padding: 0.4rem;
+    padding: 1rem;
   }
 
+  .cprofits-feat img, 
   .cprofits-feat1 img {
     max-width: 85%; 
     height: auto;
@@ -955,91 +990,82 @@
 
   /*CONTACT ME SECTION CSS*/
   .section__contact {
-    padding: 12rem;
-    min-height: 100vh;
+    padding: 8rem 2rem; 
+    min-height: 80vh; 
     background: #171229;
-    padding-top: 10rem;
   }
-
+  
   .contact__main {
     display: flex; 
     justify-content: center; 
     align-items: center;
     width: 100%;
     text-align: center;
-    padding-top: 10rem;
-    min-height: 600px;
-  }
-
-  .contact__container {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 9px;
-    padding: 4rem;
-    max-width: 60rem;
-    min-width: 700px;
-    text-align: left;
-    width: 100%;
-    border: 3px solid #7F69FA;
-    border-radius: 5px;
-    margin: 3rem auto 0 auto;
-    display: block;
+    padding: 6rem 0; 
+    min-height: auto;
     animation: appear linear;
     animation-timeline: view();
     animation-range-end: 40%;
+  }
+  
+  .contact__container {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 9px;
+    padding: 3rem; 
+    width: 100%;
+    max-width: 50rem; 
+    border: 3px solid #7F69FA;
+    border-radius: 5px;
+    margin: 2rem auto;
+    display: block;
     background: radial-gradient(ellipse, #5B319D 0%, #171229 35%);
     background-color: #0d001a;
   }
-
+  
   .contact__heading {
-    font-size: 3rem;
+    font-size: 2.5rem; 
     font-weight: bold;
     background: linear-gradient(180deg, #87CCF7 0%, #C295FD 50%, #F692E4);
     -webkit-background-clip: text;
     color: transparent;
     text-align: center;
-    margin: 0;
-    font-family: inter;
+    margin: 0 0 1rem;
   }
-
-  .contact__container h3 {
-    font-size: 1rem;
-    margin-top: 2rem;
+  
+  .contact__sub-heading {
+    font-size: 1rem; 
     color: #ffffff;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
-
+  
   .contact__form-container {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem; 
   }
-
+  
   .contact__form-label {
     color: #ffffff;
-    font-size: 0.8rem;
+    font-size: 0.9rem; 
     letter-spacing: 1px;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     display: block;
     text-align: left;
   }
-
+  
   .contact__form-input {
     color: #171229;
-    padding: 1rem;
+    padding: 0.8rem; 
     width: 100%;
     border: 1px solid #ebebeb;
-    font-size: 0.8rem;
-    letter-spacing: 0px;
+    font-size: 0.9rem; 
     background: #ffffff;
     border-radius: 5px;
     font-weight: 600;
-    width: 100%;
-    max-width: 850px;
   }
-
+  
   .contact__submit-btn {
-    width: 100px;
-    height: 50px;
-    position: relative;
+    width: 120px; 
+    height: 45px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1051,90 +1077,46 @@
     border-radius: 9px;
     background: linear-gradient(180deg, rgba(127, 105, 250, 0.15) 0%, rgba(96, 17, 156, 0.6) 100%);
     cursor: pointer;
+    font-size: 0.9rem;
   }
-
+  
   .contact__submit-btn:hover {
-    background: linear-gradient(151deg, rgba(127, 105, 250, 0.4) 0%, rgba(96, 17, 156, 0.8) 100%) !important;
-    transition: background 1s ease !important;
+    background: linear-gradient(151deg, rgba(127, 105, 250, 0.4) 0%, rgba(96, 17, 156, 0.8) 100%);
+    transition: background 1s ease;
   }
-
-  @media screen and (max-width: 767px) {
-    .contact__container {
-      width: 100%;
-      padding: 2rem;
-      min-width: 525px;
-      max-width: 100%;
-    }
-
-    .contact__main {
-      height: 80vh;
-      display: flex; 
-      justify-content: center; 
-      width: 100%;
-      text-align: center;
-      margin-bottom: 15rem;
-      margin-top: 5rem;
-    }
-
-    .contact__container h1 {
-      font-size: 2.2rem;
-    }
-
-    .contact__container h3 {
-      font-size: 0.8rem;
-    }
-
-    .contact__form-label {
-      font-size: 0.8rem;
-    }
-  }
+  
 
   @media screen and (max-width: 480px) {
+    .section__contact {
+      padding: 3rem 1rem;
+    }
+  
     .contact__container {
-      width: 80%;
-      padding: 1rem;
-      min-width: 325px;
-      max-width: 100%;
+      padding: 1.5rem;
+      border: 2px solid #7F69FA;
     }
-
-    .contact__main {
-      height: 70vh;
-      display: flex; 
-      justify-content: center; 
-      width: 100%;
-      text-align: center;
-      margin-bottom: 15rem;
-      margin-top: 15rem;
+  
+    .contact__heading {
+      font-size: 1.5rem;
     }
-
-    .contact__container h1 {
-      font-size: 1.8rem;
-    }
-
-    .contact__container h3 {
-      font-size: 0.85rem;
-    }
-
-    .contact__form-label {
-      font-size: 0.6rem;
-    }
-
-    .contact__submit-btn {
-      width: 70px;
-      height: 35px;
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: #7F69FA;
-      font-weight: 600;
-      text-decoration: none;
-      text-transform: uppercase;
-      border: 3px solid #7F69FA;
-      border-radius: 9px;
-      background: linear-gradient(180deg, rgba(127, 105, 250, 0.15) 0%, rgba(96, 17, 156, 0.6) 100%);
-      cursor: pointer;
+  
+    .contact__sub-heading {
       font-size: 0.8rem;
+    }
+  
+    .contact__form-label {
+      font-size: 0.7rem;
+    }
+  
+    .contact__form-input {
+      font-size: 0.7rem;
+      padding: 0.6rem;
+    }
+  
+    .contact__submit-btn {
+      width: 25%;
+      height: 35px;
+      font-size: 0.7rem;
     }
   }
 
