@@ -49,7 +49,7 @@
 }
 
 .navbar__item {
-  height: 80px;
+  height: 75px;
 }
 
 .navbar__links {
@@ -96,7 +96,7 @@
     position: absolute;
     margin: 0;
     opacity: 0;
-    height: 35vh;
+    height: 30vh;
     z-index: 20;
     width: 100%;
     top: -1000;
@@ -109,7 +109,7 @@
   }
 
   .navbar__menu.active {
-    margin-top: 100px;
+    margin-top: 80px;
     opacity: 1;
     pointer-events: auto;
     background: #171229;
@@ -127,7 +127,7 @@
 
   .navbar__item {
     width: 100%;
-    padding-top: 30px;
+    padding-top: 20px;
   }
 
   .navbar__links {
@@ -614,7 +614,7 @@
     align-items: center;
     width: 100%;
     background: #171229;
-    padding-top: 10rem;
+    padding-top: 5rem;
     min-height: 600px;
   }
 
@@ -791,7 +791,7 @@
   align-items: center;
   width: 100%;
   background: #171229;
-  padding-top: 20rem;
+  padding-top: 10rem;
   min-height: 600px;
 }
 
@@ -990,7 +990,7 @@
 
   /*CONTACT ME SECTION CSS*/
   .section__contact {
-    padding: 8rem 2rem; 
+    padding: 5rem 2rem; 
     min-height: 80vh; 
     background: #171229;
   }
@@ -1128,8 +1128,8 @@
     align-items: center;
     width: 100%;
     background: #171229;
-    padding-bottom: 5rem;
     min-height: 600px;
+    padding-bottom: 15rem;
   }
 
   .faq__container {
@@ -1289,7 +1289,7 @@
     }
     
     .accordion .accordion-content p {
-      font-size: 0.85rem; 
+      font-size: 0.7rem; 
     }
 
     .accordion button {
