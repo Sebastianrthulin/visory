@@ -101,3 +101,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   items.forEach((item) => item.addEventListener("click", toggleAccordion));
 });
+
+document.getElementById("seeMoreButton").addEventListener("click", function () {
+  var profits1Section = document.getElementById("cprofits1");
+
+  // Växla mellan att visa och dölja bilderna
+  if (profits1Section.classList.contains("visible")) {
+    profits1Section.classList.remove("visible"); // Ta bort 'visible' för att dölja sektionen
+    this.textContent = "See More"; // Återställ knapptexten
+  } else {
+    profits1Section.classList.add("visible"); // Lägg till 'visible' för att visa sektionen
+    this.textContent = "See Less"; // Ändra knapptexten till 'See Less'
+  }
+});

@@ -859,10 +859,51 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   gap: 50px; 
-  padding-top: 50px;
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range-end: 40%;
+  padding-top: 50px; 
+  opacity: 0; 
+  transform: translateY(50px); 
+  animation: appear 1s forwards; 
+  display: none; 
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+
+.cprofits1.visible {
+  display: grid; 
+  opacity: 1; 
+  padding-bottom: 3rem;
+}
+
+.see-more-button {
+  width: 120px; 
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #7F69FA;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 3px solid #7F69FA;
+  border-radius: 9px;
+  background: linear-gradient(180deg, rgba(127, 105, 250, 0.15) 0%, rgba(96, 17, 156, 0.6) 100%);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.see-more-button:hover {
+  background: linear-gradient(151deg, rgba(127, 105, 250, 0.4) 0%, rgba(96, 17, 156, 0.8) 100%);
+  transition: background 1s ease;
 }
 
 .cprofits-feat1 {
@@ -924,9 +965,7 @@
   }
 
   .cprofits1 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 25px; 
+    grid-template-columns: repeat(2, 1fr); /* Visar två kolumner på små skärmar */
   }
 
   .cprofits-feat {
@@ -960,11 +999,14 @@
     padding-bottom: 2rem;
   }
 
-  .cprofits, 
-  .cprofits1 {
+  .cprofits {
     display: grid;
-    grid-template-columns: 1fr; /* Lägger varje element på en ny rad */
-    gap: 1.5rem; /* Avstånd mellan elementen */
+    grid-template-columns: 1fr; 
+    gap: 1.5rem; 
+  }
+
+  .cprofits1 {
+    grid-template-columns: 1fr;
   }
 
   .cprofits-feat, 
