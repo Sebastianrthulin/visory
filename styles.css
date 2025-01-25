@@ -96,13 +96,13 @@
     position: absolute;
     margin: 0;
     opacity: 0;
-    height: 30vh;
+    height: 40vh;
     z-index: 20;
     width: 100%;
     top: -1000;
     pointer-events: none;
     transition: all 0.3s ease;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     background: transparent;
     align-items: center;
     flex-direction: column;
