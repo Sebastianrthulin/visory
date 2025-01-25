@@ -104,13 +104,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.getElementById("seeMoreButton").addEventListener("click", function () {
   var profits1Section = document.getElementById("cprofits1");
+  var profitsHeading = document.querySelector(".profits__main-heading");
 
-  // Växla mellan att visa och dölja bilderna
+
   if (profits1Section.classList.contains("visible")) {
-    profits1Section.classList.remove("visible"); // Ta bort 'visible' för att dölja sektionen
-    this.textContent = "See More"; // Återställ knapptexten
+    profits1Section.classList.remove("visible");
+    this.textContent = "See More";
+
+
+    profitsHeading.scrollIntoView({ behavior: "smooth", block: "start" });
   } else {
-    profits1Section.classList.add("visible"); // Lägg till 'visible' för att visa sektionen
-    this.textContent = "See Less"; // Ändra knapptexten till 'See Less'
+    profits1Section.classList.add("visible");
+    this.textContent = "See Less";
   }
 });
