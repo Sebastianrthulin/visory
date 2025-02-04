@@ -118,3 +118,68 @@ document.getElementById("seeMoreButton").addEventListener("click", function () {
     this.textContent = "See Less";
   }
 });
+
+(function () {
+  if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+    window.chatbase = (...arguments) => {
+      if (!window.chatbase.q) {
+        window.chatbase.q = [];
+      }
+      window.chatbase.q.push(arguments);
+    };
+    window.chatbase = new Proxy(window.chatbase, {
+      get(target, prop) {
+        if (prop === "q") {
+          return target.q;
+        }
+        return (...args) => target(prop, ...args);
+      }
+    });
+  }
+
+  const onLoad = function () {
+    const script = document.createElement("script");
+    script.src = "https://www.chatbase.co/embed.min.js";
+    script.id = "jb-Al8J-Q9qaXWvoEkkMF";
+    script.domain = "www.chatbase.co";
+    document.body.appendChild(script);
+  };
+
+  if (document.readyState === "complete") {
+    onLoad();
+  } else {
+    window.addEventListener("load", onLoad);
+  }
+})();
+
+// Funktion för att skapa en SHA-256 hash i webbläsaren
+async function createUserHash(userId) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(userId);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+  return hashHex;
+}
+
+// Exempel på hur man använder createUserHash
+const currentUserId = '1234567890';  // Ersätt med verklig användar-ID
+createUserHash(currentUserId).then(hash => {
+  console.log("User hash: ", hash);
+  // Du kan nu använda hashen för att skicka den till Chatbase eller annan funktionalitet
+});
+
+// Funktionen för att visa/dölja chatboten
+function toggleChat() {
+  const chatIframe = document.getElementById("chatIframe");
+  const chatBubble = document.getElementById("chatBubble");
+
+  // Om chatten är dold, visa den
+  if (chatIframe.style.display === "none" || chatIframe.style.display === "") {
+    chatIframe.style.display = "block";
+    chatBubble.style.display = "none";
+  } else {
+    chatIframe.style.display = "none";
+    chatBubble.style.display = "block";
+  }
+}

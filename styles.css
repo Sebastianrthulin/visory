@@ -312,7 +312,7 @@
     background: #7F69FA;
     position: fixed; 
     bottom: 20px; 
-    right: 20px; 
+    left: 20px; 
     width: 50px; 
     height: 50px; 
     border-radius: 50%; 
@@ -965,7 +965,7 @@
   }
 
   .cprofits1 {
-    grid-template-columns: repeat(2, 1fr); /* Visar två kolumner på små skärmar */
+    grid-template-columns: repeat(2, 1fr); 
   }
 
   .cprofits-feat {
@@ -1335,7 +1335,7 @@
 
   @media (max-width: 768px) {
     .faq__main-heading {
-      font-size: 2.2rem; /* Mindre rubrikstorlek */
+      font-size: 2.2rem; 
     }
   
     .faq__container {
@@ -1498,13 +1498,13 @@
       }
     
       .main__footer-row-2 {
-        margin-bottom: 1rem;
+        padding-bottom: 1rem;
         padding-left: 0.6rem;
       }
     
       .main__footer-short-desc {
         font-size: 0.8rem;
-        margin-bottom: 1rem;
+        padding-bottom: 1rem;
       }
     
       .main__footer-lower {
